@@ -48,7 +48,7 @@ const Footer = () => {
           <p className="mt-2">
             Designed and developed by{" "}
             <a
-              href="https://github.com/nguyenvudangkhanh"
+              href="https://github.com/nvdekay"
               target="_blank"
               rel="noopener noreferrer"
               className="text-arena-gold hover:underline"

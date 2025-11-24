@@ -67,11 +67,11 @@ const RulesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-steel-blue font-mono tracking-widest uppercase text-sm mb-2 block">Forge Your Strategy</span>
+          <span className="text-steel-blue font-mono tracking-widest uppercase text-xs sm:text-sm mb-2 block">Forge Your Strategy</span>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-mithril">Thể Lệ Thi Đấu</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {rules.map((rule, index) => (
             <RuleCard 
               key={index}

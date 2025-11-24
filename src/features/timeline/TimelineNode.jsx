@@ -6,7 +6,7 @@ const TimelineNode = ({ phase, title, description, index, isLast }) => {
   const isInView = useInView(ref, { once: false, margin: "-100px" });
 
   return (
-    <div ref={ref} className={`relative flex items-start mb-24 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} md:justify-between w-full max-w-5xl mx-auto group`}>
+    <div ref={ref} className={`relative flex items-start mb-24 flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:justify-between w-full max-w-5xl mx-auto group`}>
       
       {/* Center Line Node */}
       <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 flex flex-col items-center h-full">
@@ -35,10 +35,10 @@ const TimelineNode = ({ phase, title, description, index, isLast }) => {
 
       {/* Content Card */}
       <motion.div 
-        initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+        initial={{ opacity: 0, x: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: 0, y: 20 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className={`ml-16 md:ml-0 w-full md:w-[45%] p-6 md:p-8 rounded-xl border border-mithril/10 bg-void-black/50 backdrop-blur-sm relative overflow-hidden hover:border-mithril/30 transition-colors duration-300
+        className={`ml-16 md:ml-0 w-[calc(100%-4rem)] md:w-[45%] p-6 md:p-8 rounded-xl border border-mithril/10 bg-void-black/50 backdrop-blur-sm relative overflow-hidden hover:border-mithril/30 transition-colors duration-300
           ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}
       >
         {/* Shimmer Effect */}

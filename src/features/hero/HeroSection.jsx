@@ -26,17 +26,17 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-4xl md:text-6xl lg:text-8xl font-serif font-black text-mithril tracking-tight relative z-10"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black text-mithril tracking-tight relative z-10 break-words"
           >
-            FPTU DEBATE <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-magma-red via-red-500 to-magma-red animate-pulse">
+            FPTU DEBATE <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-magma-red via-red-500 to-magma-red animate-pulse block md:inline mt-2 md:mt-0">
               CHAMPIONSHIP
             </span>
           </motion.h1>
           
           {/* Glitch Layers */}
           <motion.h1
-            className="absolute top-0 left-0 w-full text-4xl md:text-6xl lg:text-8xl font-serif font-black text-magma-red opacity-0 group-hover:opacity-30 z-0 select-none pointer-events-none"
+            className="absolute top-0 left-0 w-full text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black text-magma-red opacity-0 group-hover:opacity-30 z-0 select-none pointer-events-none break-words"
             animate={{ 
               x: [-2, 2, -1, 0],
               y: [1, -1, 0],
@@ -47,10 +47,11 @@ const HeroSection = () => {
               repeatDelay: 5
             }}
           >
-            FPTU DEBATE <br /> CHAMPIONSHIP
+            FPTU DEBATE <br className="hidden md:block" />
+            <span className="block md:inline mt-2 md:mt-0">CHAMPIONSHIP</span>
           </motion.h1>
           <motion.h1
-            className="absolute top-0 left-0 w-full text-4xl md:text-6xl lg:text-8xl font-serif font-black text-steel-blue opacity-0 group-hover:opacity-30 z-0 select-none pointer-events-none"
+            className="absolute top-0 left-0 w-full text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black text-steel-blue opacity-0 group-hover:opacity-30 z-0 select-none pointer-events-none break-words"
             animate={{ 
               x: [2, -2, 1, 0],
               y: [-1, 1, 0],
@@ -61,7 +62,8 @@ const HeroSection = () => {
               repeatDelay: 5
             }}
           >
-            FPTU DEBATE <br /> CHAMPIONSHIP
+            FPTU DEBATE <br className="hidden md:block" />
+            <span className="block md:inline mt-2 md:mt-0">CHAMPIONSHIP</span>
           </motion.h1>
         </div>
 

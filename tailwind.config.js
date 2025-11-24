@@ -16,7 +16,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        serif: ['Cinzel', 'serif'],
+        serif: ['"Playfair Display"', 'serif'],
       },
     },
   },

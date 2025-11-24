@@ -9,10 +9,10 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
         className="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
         onClick={onClick}
       >
-        <span className={`text-lg md:text-xl font-serif font-medium transition-colors duration-300 ${isOpen ? 'text-arena-gold' : 'text-mithril group-hover:text-white'}`}>
+        <span className={`text-base sm:text-lg md:text-xl font-serif font-medium transition-colors duration-300 pr-4 ${isOpen ? 'text-arena-gold' : 'text-mithril group-hover:text-white'}`}>
           {question}
         </span>
-        <span className={`ml-4 p-2 rounded-full border transition-all duration-300 ${isOpen ? 'border-arena-gold text-arena-gold rotate-180' : 'border-mithril/30 text-mithril/50 group-hover:border-mithril group-hover:text-mithril'}`}>
+        <span className={`shrink-0 p-2 rounded-full border transition-all duration-300 ${isOpen ? 'border-arena-gold text-arena-gold rotate-180' : 'border-mithril/30 text-mithril/50 group-hover:border-mithril group-hover:text-mithril'}`}>
           {isOpen ? <Minus size={20} /> : <Plus size={20} />}
         </span>
       </button>
@@ -74,7 +74,7 @@ const QnASection = () => {
           <p className="text-smoke">Giải đáp những câu hỏi thường gặp về giải đấu.</p>
         </motion.div>
 
-        <div className="bg-void-black/50 backdrop-blur-md border border-mithril/10 rounded-2xl p-6 md:p-10 shadow-2xl">
+        <div className="bg-void-black/50 backdrop-blur-md border border-mithril/10 rounded-2xl p-4 sm:p-6 md:p-10 shadow-2xl">
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
