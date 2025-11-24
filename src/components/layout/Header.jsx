@@ -1,0 +1,93 @@
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+
+const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: 'Giới thiệu', href: '#hero' },
+    { name: 'Timeline', href: '#timeline' },
+    { name: 'Thể lệ', href: '#rules' },
+    { name: 'QnA', href: '#qna' },
+  ];
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'py-4 bg-void-black/90 backdrop-blur-md border-b border-mithril/10' : 'py-6 bg-transparent'
+      }`}
+    >
+      <div className="container mx-auto px-6 flex justify-between items-center">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="text-2xl font-serif font-bold text-mithril tracking-widest"
+        >
+          <span className="text-magma-red">F</span>DC
+        </motion.div>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex space-x-8">
+          {navLinks.map((link, index) => (
+            <motion.a
+              key={link.name}
+              href={link.href}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="text-sm font-medium text-mithril/80 hover:text-arena-gold transition-colors uppercase tracking-wider relative group"
+            >
+              {link.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-arena-gold transition-all duration-300 group-hover:w-full" />
+            </motion.a>
+          ))}
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-mithril hover:text-arena-gold transition-colors"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Nav */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-void-black/95 backdrop-blur-xl border-b border-mithril/10 overflow-hidden"
+          >
+            <div className="flex flex-col p-6 space-y-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-mithril hover:text-arena-gold transition-colors font-serif text-lg"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+};
+
+export default Header;
