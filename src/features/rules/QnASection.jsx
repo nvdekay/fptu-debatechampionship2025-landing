@@ -25,7 +25,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="pb-6 text-smoke leading-relaxed">
+            <div className="pb-6 text-smoke leading-relaxed text-sm sm:text-base">
               {answer}
             </div>
           </motion.div>
@@ -40,20 +40,32 @@ const QnASection = () => {
 
   const faqs = [
     {
-      question: "Ai có thể tham gia FPTU Debate Championship?",
-      answer: "Cuộc thi mở rộng cho tất cả sinh viên đang theo học tại Đại học FPT và các trường đại học trên địa bàn thành phố. Không giới hạn chuyên ngành hay năm học."
+      question: "Ai có thể tham gia FPTU Debate Championship 2026?",
+      answer: "Tất cả sinh viên FPTU Hà Nội đều có thể đăng ký, không yêu cầu kinh nghiệm tranh biện trước đó. Chỉ cần tinh thần học hỏi và sẵn sàng thử thách."
     },
     {
-      question: "Lệ phí tham gia là bao nhiêu?",
-      answer: "Lệ phí tham gia là 150.000 VNĐ/đội (đã bao gồm áo đồng phục và tài liệu training). Các đội sẽ đóng phí sau khi vượt qua vòng đơn."
+      question: "Tôi chưa từng tranh biện, liệu có thể tham gia không?",
+      answer: "Có. Cuộc thi được thiết kế theo hành trình \"Ignite → Forge → Sharpen → Clash\", giúp bạn phát triển kỹ năng từ cơ bản đến nâng cao. Người mới hoàn toàn vẫn có thể tham gia và tiến sâu nếu có tư duy logic và sự chuẩn bị tốt."
     },
     {
-      question: "Tôi chưa có kinh nghiệm tranh biện có tham gia được không?",
-      answer: "Hoàn toàn được! BTC sẽ tổ chức các buổi workshop và training chuyên sâu từ cơ bản đến nâng cao với các chuyên gia hàng đầu để trang bị kỹ năng cho các bạn trước khi bước vào vòng đấu chính thức."
+      question: "Hình thức thi là cá nhân hay theo đội?",
+      answer: "Cuộc thi được thi theo đội (team). Các đội tự thành lập trước khi đăng ký."
     },
     {
-      question: "Làm sao để tìm đồng đội nếu tôi đăng ký cá nhân?",
-      answer: "BTC sẽ hỗ trợ ghép đội cho các thí sinh đăng ký cá nhân (Free Agent) dựa trên kinh nghiệm và nguyện vọng của các bạn. Hãy tham gia group cộng đồng của giải đấu để tìm kiếm đồng đội phù hợp."
+      question: "Có bắt buộc phải tham gia đầy đủ tất cả vòng thi không?",
+      answer: "Có. Sau khi đăng ký, thí sinh cần cam kết tham gia đầy đủ các vòng thi để đảm bảo tính công bằng, tiến độ và chất lượng giải đấu."
+    },
+    {
+      question: "Có lệ phí tham gia không?",
+      answer: "Lệ phí cam kết cho mỗi đội thi là 400.000 VNĐ, tương đương 100.000 VNĐ/người. Phí sẽ được hoàn trả sau khi đội thi hoàn thành cuộc thi và hoàn thành chương trình."
+    },
+    {
+      question: "Bao lâu thì có kết quả mỗi vòng?",
+      answer: "Kết quả sẽ được công bố sau mỗi vòng thi, thông qua fanpage và email."
+    },
+    {
+      question: "Nếu đội bỏ thi giữa chừng có sao không?",
+      answer: "Đội bỏ thi sẽ bị loại và không được hoàn lại phí cam kết. Ngoài ra, đội có thể bị hạn chế tham gia các mùa sau tùy quy định BTC."
     }
   ];
 

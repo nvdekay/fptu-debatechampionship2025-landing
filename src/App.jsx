@@ -4,6 +4,8 @@ import Footer from './components/layout/Footer';
 import ParticlesBackground from './components/layout/ParticlesBackground';
 import HeroSection from './features/hero/HeroSection';
 import MindForgeTimeline from './features/timeline/MindForgeTimeline';
+import BenefitsSection from './features/benefits/BenefitsSection';
+import PrizesSection from './features/prizes/PrizesSection';
 import RulesSection from './features/rules/RulesSection';
 import QnASection from './features/rules/QnASection';
 
@@ -24,6 +26,8 @@ function App() {
       <main>
         <HeroSection />
         <MindForgeTimeline />
+        <BenefitsSection />
+        <PrizesSection />
         <RulesSection />
         <QnASection />
       </main>

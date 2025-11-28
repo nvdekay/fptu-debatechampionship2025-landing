@@ -17,6 +17,8 @@ const Header = () => {
   const navLinks = [
     { name: 'Giới thiệu', href: '#hero' },
     { name: 'Timeline', href: '#timeline' },
+    { name: 'Quyền lợi', href: '#benefits' },
+    { name: 'Giải thưởng', href: '#prizes' },
     { name: 'Thể lệ', href: '#rules' },
     { name: 'QnA', href: '#qna' },
   ];
@@ -37,7 +39,7 @@ const Header = () => {
         </motion.div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden lg:flex space-x-6 xl:space-x-8">
           {navLinks.map((link, index) => (
             <motion.a
               key={link.name}
@@ -45,7 +47,7 @@ const Header = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="text-sm font-medium text-mithril/80 hover:text-arena-gold transition-colors uppercase tracking-wider relative group"
+              className="text-xs xl:text-sm font-medium text-mithril/80 hover:text-arena-gold transition-colors uppercase tracking-wider relative group"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-arena-gold transition-all duration-300 group-hover:w-full" />
@@ -55,7 +57,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-mithril hover:text-arena-gold transition-colors"
+          className="lg:hidden text-mithril hover:text-arena-gold transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -69,7 +71,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-void-black/95 backdrop-blur-xl border-b border-mithril/10 overflow-hidden absolute top-full left-0 right-0"
+            className="lg:hidden bg-void-black/95 backdrop-blur-xl border-b border-mithril/10 overflow-hidden absolute top-full left-0 right-0"
           >
             <div className="flex flex-col p-6 space-y-4">
               {navLinks.map((link) => (
