@@ -48,11 +48,6 @@ const RulesSection = () => {
       icon: Users,
       title: "Đội Hình Thi Đấu",
       description: "Các đội tự thành lập trước khi đăng ký, mỗi đội 3-4 thành viên. Sau khi đăng ký, thí sinh cần cam kết tham gia đầy đủ các vòng thi để đảm bảo tính công bằng và chất lượng giải đấu."
-    },
-    {
-      icon: Trophy,
-      title: "Cơ Cấu Giải Thưởng",
-      description: "Tổng giải thưởng lên đến 29 triệu đồng bao gồm hiện kim và hiện vật. Các giải thưởng: Nhất, Nhì, Ba, Khuyến Khích và Đội được yêu thích nhất."
     }
   ];
 
