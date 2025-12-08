@@ -6,7 +6,7 @@ const TimelineNode = ({ phase, title, date, description, index, isLast }) => {
   const isInView = useInView(ref, { once: false, margin: "-100px" });
 
   return (
-    <div ref={ref} className={`relative flex items-start mb-24 flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:justify-between w-full max-w-5xl mx-auto group`}>
+    <div ref={ref} className={`relative flex items-start mb-16 md:mb-24 flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:justify-between w-full max-w-5xl mx-auto group`}>
 
       {/* Center Line Node */}
       <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 flex flex-col items-center h-full">

@@ -16,7 +16,7 @@ const HeroSection = () => {
           <img
             src="/img/logo kim loại.webp"
             alt="FPTU Debate Championship Logo"
-            className="w-24 md:w-3/5 h-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+            className="w-32 sm:w-48 md:w-3/5 h-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
           />
         </motion.div>
 
@@ -66,7 +66,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-16 z-20 relative"
+          className="mt-10 md:mt-16 z-20 relative"
         >
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSftqbfvWtnNn8FDjkcPISTroE2yMbtl48cZyRd_Eqf-C0cnNw/viewform"

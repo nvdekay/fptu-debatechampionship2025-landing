@@ -135,35 +135,45 @@ const rounds = [
     label: 'Chung Kết',
     icon: Trophy,
     content: {
-      title: 'Vòng Chung Kết: Trận Chiến Quyết Định',
+      title: 'Vòng Chung Kết: Đỉnh Cao Tranh Biện',
       sections: [
         {
           title: 'Hình thức thi đấu',
           icon: Users,
           items: [
-            '04 đội chia thành 2 bảng (A, B).',
-            'Biết trước đề bài (motion) 01 ngày.',
-            'Tranh biện đối kháng trực tiếp (face-to-face).'
+            '04 đội thi xuất sắc nhất từ vòng Bán kết sẽ bước vào vòng Chung kết (trực tiếp).',
+            'Mỗi đội gồm 04 thành viên.',
+            'Bảng A: Hai đội tranh giải Ba - Tư.',
+            'Bảng B: Hai đội tranh giải Nhất - Nhì.'
           ]
         },
         {
-          title: 'Cấu trúc Debate',
+          title: 'Cách thức tranh biện',
+          icon: Video,
+          items: [
+            'Mỗi bảng sẽ có một “kiến nghị” (motion) do BTC cung cấp.',
+            'Các đội thi biết trước đề bài 01 ngày.',
+            'Thi đấu trực tiếp (face-to-face) theo hình thức đối kháng.'
+          ]
+        },
+        {
+          title: 'Cấu trúc buổi Debate',
           icon: Clock,
           items: [
-            'Lượt 1 (3 phút): Giới thiệu, đưa ra định nghĩa, 2-3 luận điểm chủ đạo.',
-            'Lượt 2 (3 phút): Làm rõ lập luận, mở rộng bằng chứng.',
-            'Lượt 3 (4 phút): Phân tích, phản biện lại các luận điểm đối phương (có POI).',
-            'Lượt 4 (2 phút): Tóm tắt lập luận, kết luận.',
-            'Đội Ủng hộ trình bày trước ở tất cả các lượt.'
+            'Lượt 1 (3 phút): Đội ủng hộ nói trước. Giới thiệu, định nghĩa, nêu 2-3 luận điểm chính. (Không POI)',
+            'Lượt 2 (3 phút): Đội ủng hộ nói trước. Phát triển luận điểm, mở rộng bằng chứng. (Không POI)',
+            'Lượt 3 (4 phút): Đội ủng hộ nói trước. Phản biện & trả lời câu hỏi (POI tối đa 2 câu/40s).',
+            'Lượt 4 (2 phút): Đội ủng hộ nói trước. Tổng kết, khẳng định quan điểm. (Không POI)'
           ]
         },
         {
-          title: 'Kết quả chung cuộc',
-          icon: Trophy,
+          title: 'Yêu cầu & Đánh giá',
+          icon: CheckCircle,
           items: [
-            'BGK chấm điểm sau từng lượt và nhận xét tổng quan.',
-            'BTC công bố tổng điểm cuối cùng sau 04 lượt.',
-            'Quyết định 2 đội tranh Nhất - Nhì và 2 đội tranh Ba - Tư.'
+            'Nội dung: Lập luận rõ ràng, logic, dẫn chứng cụ thể, phản biện trực tiếp.',
+            'Kỹ năng: Teamwork, ứng biến, sáng tạo và tư duy phản biện.',
+            'Thái độ: Văn minh, tôn trọng, đúng tinh thần học thuật.',
+            'Kết quả: BGK chấm điểm từng lượt, BTC công bố tổng điểm và thứ hạng chung cuộc.'
           ]
         }
       ]

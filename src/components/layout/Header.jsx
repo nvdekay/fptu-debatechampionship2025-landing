@@ -87,12 +87,12 @@ const Header = () => {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-void-black/95 backdrop-blur-xl border-b border-mithril/10 overflow-hidden absolute top-full left-0 right-0"
           >
-            <div className="flex flex-col p-6 space-y-4">
+            <div className="flex flex-col p-6 space-y-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-mithril hover:text-arena-gold transition-colors font-serif text-lg"
+                  className="text-mithril hover:text-arena-gold transition-colors font-serif text-xl tracking-wide font-medium"
                   onClick={(e) => handleNavClick(e, link.href)}
                 >
                   {link.name}
