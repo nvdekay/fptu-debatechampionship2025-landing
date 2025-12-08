@@ -7,56 +7,37 @@ const HeroSection = () => {
     <section id="hero" className="relative min-h-screen flex flex-col justify-center items-center pt-20 overflow-hidden">
       {/* Content Container */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-
-        {/* Subtitle */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-4"
-        >
-          <span className="inline-block py-1 px-3 border border-arena-gold/30 rounded-full bg-arena-gold/5 text-arena-gold text-sm md:text-base font-serif tracking-[0.2em] uppercase backdrop-blur-sm">
-            Đấu trường rèn trí tuệ
-          </span>
-        </motion.div>
-
-        {/* Main Title Image */}
-        <motion.div
+        {/* Main Title Image with Link */}
+        <motion.a
+          href="https://www.facebook.com/fptuchampionship"
+          target="_blank"
+          rel="noopener noreferrer"
           initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="relative mb-8 md:mb-12"
+          className="relative mb-12 block cursor-pointer group"
         >
           <motion.img
-            src="/img/typo.webp"
+            src="/img/typo chính của tôi.webp"
             alt="FPTU Debate Championship"
-            className="w-full max-w-[90%] md:max-w-4xl mx-auto h-auto object-contain"
+            className="w-full max-w-[90%] md:max-w-5xl mx-auto h-auto object-contain drop-shadow-[0_0_15px_rgba(217,175,44,0.1)]"
             animate={{
-              y: [-8, 8, -8],
-              filter: [
-                "drop-shadow(0 0 20px rgba(217,175,44,0.15))",
-                "drop-shadow(0 0 35px rgba(217,175,44,0.3))",
-                "drop-shadow(0 0 20px rgba(217,175,44,0.15))"
-              ]
+              y: [-10, 10, -10],
             }}
             transition={{
-              duration: 5,
+              duration: 6,
               repeat: Infinity,
               ease: "easeInOut"
             }}
+            whileHover={{
+              scale: 1.05,
+              filter: "drop-shadow(0 0 30px rgba(217,175,44,0.4))"
+            }}
           />
-        </motion.div>
-
-        {/* Description */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="text-smoke text-base md:text-xl max-w-2xl mx-auto mb-12 font-light leading-relaxed"
-        >
-          Nơi ngọn lửa đam mê được thắp sáng, nơi tư duy sắc bén được tôi luyện.
-          Hãy sẵn sàng cho hành trình lột xác tại MindForge.
-        </motion.p>
+          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-arena-gold text-sm font-serif tracking-widest uppercase">
+            Visit our Fanpage
+          </div>
+        </motion.a>
 
         {/* Countdown */}
         <motion.div
@@ -72,15 +53,20 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-16"
+          className="mt-16 cursor-pointer"
         >
-          <button className="relative px-8 py-4 bg-transparent overflow-hidden group">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSftqbfvWtnNn8FDjkcPISTroE2yMbtl48cZyRd_Eqf-C0cnNw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block px-8 py-4 bg-transparent overflow-hidden group"
+          >
             <span className="absolute inset-0 w-full h-full bg-magma-red/20 group-hover:bg-magma-red/40 transition-colors duration-300 transform skew-x-12"></span>
             <span className="absolute inset-0 w-full h-full border border-magma-red/50 group-hover:border-magma-red transition-colors duration-300 transform skew-x-12"></span>
             <span className="relative text-mithril font-serif font-bold tracking-widest uppercase group-hover:text-white transition-colors">
               Đăng ký ngay
             </span>
-          </button>
+          </a>
         </motion.div>
       </div>
 

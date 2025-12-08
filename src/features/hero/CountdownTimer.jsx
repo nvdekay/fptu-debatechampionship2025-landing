@@ -10,7 +10,7 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2026-08-12T00:00:00");
+    const targetDate = new Date("2026-01-01T20:00:00");
     const interval = setInterval(() => {
       const now = new Date();
       const difference = targetDate.getTime() - now.getTime();
@@ -38,15 +38,11 @@ const CountdownTimer = () => {
           {/* Steel plate texture effect */}
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.05)_50%,transparent_75%)] bg-[length:250%_250%] animate-[shine_3s_infinite]"></div>
 
-          <motion.span
-            key={value}
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -10, opacity: 0 }}
+          <span
             className="text-xl sm:text-2xl md:text-4xl font-bold font-mono text-mithril group-hover:text-arena-gold transition-colors duration-300"
           >
             {value < 10 ? `0${value}` : value}
-          </motion.span>
+          </span>
 
           {/* Heating effect at bottom */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-magma-red to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300 box-shadow-[0_0_10px_#7F1D1D]"></div>
