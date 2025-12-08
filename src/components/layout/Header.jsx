@@ -35,17 +35,20 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-4 bg-void-black/90 backdrop-blur-md border-b border-mithril/10' : 'py-6 bg-transparent'
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-1 bg-transparent border-b border-mithril/10`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-2xl font-serif font-bold text-mithril tracking-widest cursor-pointer"
+          className="cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <span className="text-magma-red">F</span>DC
+          <img
+            src="/img/icon.webp"
+            alt="FPTU Debate Championship"
+            className="h-12 md:h-16 w-16 object-contain"
+          />
         </motion.div>
 
         {/* Desktop Nav */}

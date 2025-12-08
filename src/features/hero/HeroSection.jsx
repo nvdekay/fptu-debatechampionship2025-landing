@@ -7,6 +7,19 @@ const HeroSection = () => {
     <section id="hero" className="relative min-h-screen flex flex-col justify-center items-center pt-20 overflow-hidden">
       {/* Content Container */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-8 flex justify-center"
+        >
+          <img
+            src="/img/logo kim loại.webp"
+            alt="FPTU Debate Championship Logo"
+            className="w-24 md:w-3/5 h-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+          />
+        </motion.div>
+
         {/* Main Title Image with Link */}
         <motion.a
           href="https://www.facebook.com/fptuchampionship"
