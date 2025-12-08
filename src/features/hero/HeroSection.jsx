@@ -72,12 +72,12 @@ const HeroSection = () => {
             href="https://docs.google.com/forms/d/e/1FAIpQLSftqbfvWtnNn8FDjkcPISTroE2yMbtl48cZyRd_Eqf-C0cnNw/viewform"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block px-10 py-4 bg-transparent overflow-hidden group cursor-pointer border border-magma-red/30 hover:border-magma-red transition-colors duration-500"
+            className="relative inline-block px-10 py-4 bg-magma-red/20 overflow-hidden group cursor-pointer border border-magma-red transition-all duration-500 shadow-[0_0_20px_rgba(239,68,68,0.2)] hover:shadow-[0_0_30px_rgba(239,68,68,0.5)]"
           >
             {/* Background Hover Effect */}
-            <span className="absolute inset-0 w-full h-full bg-magma-red/10 group-hover:bg-magma-red/30 transition-all duration-500 transform skew-x-12 origin-left scale-x-0 group-hover:scale-x-100"></span>
+            <span className="absolute inset-0 w-full h-full bg-magma-red/40 transition-all duration-500 transform skew-x-12 origin-left scale-x-0 group-hover:scale-x-100"></span>
 
-            <span className="relative text-mithril font-serif font-bold tracking-[0.2em] uppercase group-hover:text-white transition-colors duration-300">
+            <span className="relative text-white font-serif font-bold tracking-[0.2em] uppercase transition-colors duration-300 drop-shadow-md">
               Đăng ký ngay
             </span>
           </a>
