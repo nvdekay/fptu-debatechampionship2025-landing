@@ -13,23 +13,27 @@ const MindForgeTimeline = () => {
 
   const phases = [
     {
-      phase: "Ignite (Khởi lửa)",
-      title: "Đăng ký & Vòng loại",
+      phase: "Ignite",
+      title: "Vòng Đơn",
+      date: "09/12/2025 - 01/01/2026",
       description: "Ngọn lửa đam mê bắt đầu nhen nhóm. Các đội thi đăng ký và trải qua vòng sơ loại gắt gao để chọn ra những chiến binh xứng đáng nhất bước vào lò luyện.",
     },
     {
-      phase: "Forge (Rèn giũa)",
-      title: "Training & Workshop",
-      description: "Giai đoạn tôi luyện khắc nghiệt. Dưới áp lực và sức nóng của kiến thức chuyên sâu, các thí sinh được trang bị kỹ năng tranh biện, tư duy phản biện và chiến thuật thi đấu.",
+      phase: "Forge",
+      title: "Vòng Sơ khảo",
+      date: "07/01/2026 - 15/01/2026",
+      description: "Các đội thi bước vào vòng Sơ khảo đầy gay cấn. Dưới áp lực và sức nóng của kiến thức chuyên sâu, 8 đội xuất sắc nhất sẽ lộ diện.",
     },
     {
-      phase: "Sharpen (Mài sắc)",
-      title: "Vòng Bảng & Tứ Kết",
-      description: "Lưỡi kiếm trí tuệ được mài sắc qua từng trận đấu. Các đội thi đối đầu trực tiếp, vận dụng mọi kỹ năng đã học để vượt qua đối thủ và tiến sâu vào giải đấu.",
+      phase: "Sharpen",
+      title: "Vòng Bán kết",
+      date: "16/01/2026 - 22/01/2026",
+      description: "Lưỡi kiếm trí tuệ được mài sắc. 4 đội mạnh nhất đối đầu trực tiếp, vận dụng mọi kỹ năng đã học để tranh giành tấm vé vào chung kết.",
     },
     {
-      phase: "Clash (Đối đầu)",
-      title: "Bán Kết & Chung Kết",
+      phase: "Clash",
+      title: "Vòng Chung kết",
+      date: "23/01/2026 - 02/02/2026",
       description: "Trận chiến cuối cùng. Nơi những bộ óc thiên tài va chạm, tạo nên những màn tranh biện bùng nổ. Chỉ có đội bản lĩnh nhất mới giành được chiếc cúp danh giá.",
     }
   ];
@@ -40,7 +44,7 @@ const MindForgeTimeline = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(19,39,80,0.1),transparent_70%)] pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10" ref={containerRef}>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -53,20 +57,21 @@ const MindForgeTimeline = () => {
         <div className="relative">
           {/* Connecting Line Background */}
           <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-mithril/10 z-0"></div>
-          
+
           {/* Molten Gold Progress Line */}
-          <motion.div 
+          <motion.div
             style={{ height }}
             className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 w-0.5 bg-linear-to-b from-magma-red via-arena-gold to-steel-blue z-10 shadow-[0_0_10px_#D9AF2C]"
           ></motion.div>
 
           <div className="space-y-0">
             {phases.map((phase, index) => (
-              <TimelineNode 
+              <TimelineNode
                 key={index}
                 index={index}
                 phase={phase.phase}
                 title={phase.title}
+                date={phase.date}
                 description={phase.description}
                 isLast={index === phases.length - 1}
               />
