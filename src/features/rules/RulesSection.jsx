@@ -129,6 +129,45 @@ const rounds = [
         }
       ]
     }
+  },
+  {
+    id: 'chung-ket',
+    label: 'Chung Kết',
+    icon: Trophy,
+    content: {
+      title: 'Vòng Chung Kết: Trận Chiến Quyết Định',
+      sections: [
+        {
+          title: 'Hình thức thi đấu',
+          icon: Users,
+          items: [
+            '04 đội chia thành 2 bảng (A, B).',
+            'Biết trước đề bài (motion) 01 ngày.',
+            'Tranh biện đối kháng trực tiếp (face-to-face).'
+          ]
+        },
+        {
+          title: 'Cấu trúc Debate',
+          icon: Clock,
+          items: [
+            'Lượt 1 (3 phút): Giới thiệu, đưa ra định nghĩa, 2-3 luận điểm chủ đạo.',
+            'Lượt 2 (3 phút): Làm rõ lập luận, mở rộng bằng chứng.',
+            'Lượt 3 (4 phút): Phân tích, phản biện lại các luận điểm đối phương (có POI).',
+            'Lượt 4 (2 phút): Tóm tắt lập luận, kết luận.',
+            'Đội Ủng hộ trình bày trước ở tất cả các lượt.'
+          ]
+        },
+        {
+          title: 'Kết quả chung cuộc',
+          icon: Trophy,
+          items: [
+            'BGK chấm điểm sau từng lượt và nhận xét tổng quan.',
+            'BTC công bố tổng điểm cuối cùng sau 04 lượt.',
+            'Quyết định 2 đội tranh Nhất - Nhì và 2 đội tranh Ba - Tư.'
+          ]
+        }
+      ]
+    }
   }
 ];
 
@@ -159,9 +198,9 @@ const RulesSection = () => {
               <button
                 key={round.id}
                 onClick={() => setActiveTab(round.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300 border ${isActive
-                    ? 'bg-steel-blue/20 border-steel-blue text-steel-blue shadow-[0_0_15px_rgba(70,130,180,0.3)]'
-                    : 'bg-void-black border-mithril/20 text-mithril/60 hover:text-mithril hover:border-mithril/40'
+                className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300 border cursor-pointer ${isActive
+                  ? 'bg-steel-blue/20 border-steel-blue text-steel-blue shadow-[0_0_15px_rgba(70,130,180,0.3)]'
+                  : 'bg-void-black border-mithril/20 text-mithril/60 hover:text-mithril hover:border-mithril/40'
                   }`}
               >
                 <Icon size={18} />

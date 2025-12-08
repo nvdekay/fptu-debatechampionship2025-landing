@@ -66,17 +66,18 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-16 cursor-pointer"
+          className="mt-16 z-20 relative"
         >
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSftqbfvWtnNn8FDjkcPISTroE2yMbtl48cZyRd_Eqf-C0cnNw/viewform"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block px-8 py-4 bg-transparent overflow-hidden group"
+            className="relative inline-block px-10 py-4 bg-transparent overflow-hidden group cursor-pointer border border-magma-red/30 hover:border-magma-red transition-colors duration-500"
           >
-            <span className="absolute inset-0 w-full h-full bg-magma-red/20 group-hover:bg-magma-red/40 transition-colors duration-300 transform skew-x-12"></span>
-            <span className="absolute inset-0 w-full h-full border border-magma-red/50 group-hover:border-magma-red transition-colors duration-300 transform skew-x-12"></span>
-            <span className="relative text-mithril font-serif font-bold tracking-widest uppercase group-hover:text-white transition-colors">
+            {/* Background Hover Effect */}
+            <span className="absolute inset-0 w-full h-full bg-magma-red/10 group-hover:bg-magma-red/30 transition-all duration-500 transform skew-x-12 origin-left scale-x-0 group-hover:scale-x-100"></span>
+
+            <span className="relative text-mithril font-serif font-bold tracking-[0.2em] uppercase group-hover:text-white transition-colors duration-300">
               Đăng ký ngay
             </span>
           </a>
@@ -84,7 +85,7 @@ const HeroSection = () => {
       </div>
 
       {/* Bottom Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-void-black to-transparent z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-void-black to-transparent z-10 pointer-events-none"></div>
     </section>
   );
 };

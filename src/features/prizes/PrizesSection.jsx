@@ -183,7 +183,7 @@ const PrizesSection = () => {
           <p className="text-mithril/60 text-sm md:text-base mb-6">
             Đăng ký ngay để có cơ hội giành những phần thưởng giá trị này
           </p>
-          <button className="relative px-8 py-4 bg-transparent overflow-hidden group">
+          <button className="relative px-8 py-4 bg-transparent overflow-hidden group cursor-pointer">
             <span className="absolute inset-0 w-full h-full bg-arena-gold/20 group-hover:bg-arena-gold/40 transition-colors duration-300 transform skew-x-12"></span>
             <span className="absolute inset-0 w-full h-full border border-arena-gold/50 group-hover:border-arena-gold transition-colors duration-300 transform skew-x-12"></span>
             <span className="relative text-mithril font-serif font-bold tracking-widest uppercase group-hover:text-white transition-colors">
