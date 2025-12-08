@@ -22,12 +22,12 @@ function App() {
     <div className="bg-void-black min-h-screen text-mithril selection:bg-magma-red selection:text-white overflow-x-hidden">
       <ParticlesBackground />
       <Header />
-      
+
       <main>
         <HeroSection />
         <MindForgeTimeline />
         <BenefitsSection />
-        <PrizesSection />
+        {/* <PrizesSection /> */}
         <RulesSection />
         <QnASection />
       </main>

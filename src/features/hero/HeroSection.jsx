@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section id="hero" className="relative min-h-screen flex flex-col justify-center items-center pt-20 overflow-hidden">
       {/* Content Container */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        
+
         {/* Subtitle */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,52 +20,32 @@ const HeroSection = () => {
           </span>
         </motion.div>
 
-        {/* Main Title with Glitch Effect */}
-        <div className="relative mb-6 group">
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black text-mithril tracking-tight relative z-10 break-words"
-          >
-            FPTU DEBATE <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-magma-red via-red-500 to-magma-red animate-pulse block md:inline mt-2 md:mt-0">
-              CHAMPIONSHIP
-            </span>
-          </motion.h1>
-          
-          {/* Glitch Layers */}
-          <motion.h1
-            className="absolute top-0 left-0 w-full text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black text-magma-red opacity-0 group-hover:opacity-30 z-0 select-none pointer-events-none break-words"
-            animate={{ 
-              x: [-2, 2, -1, 0],
-              y: [1, -1, 0],
+        {/* Main Title Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="relative mb-8 md:mb-12"
+        >
+          <motion.img
+            src="/img/typo.webp"
+            alt="FPTU Debate Championship"
+            className="w-full max-w-[90%] md:max-w-4xl mx-auto h-auto object-contain"
+            animate={{
+              y: [-8, 8, -8],
+              filter: [
+                "drop-shadow(0 0 20px rgba(217,175,44,0.15))",
+                "drop-shadow(0 0 35px rgba(217,175,44,0.3))",
+                "drop-shadow(0 0 20px rgba(217,175,44,0.15))"
+              ]
             }}
-            transition={{ 
-              repeat: Infinity, 
-              duration: 0.2,
-              repeatDelay: 5
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut"
             }}
-          >
-            FPTU DEBATE <br className="hidden md:block" />
-            <span className="block md:inline mt-2 md:mt-0">CHAMPIONSHIP</span>
-          </motion.h1>
-          <motion.h1
-            className="absolute top-0 left-0 w-full text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black text-steel-blue opacity-0 group-hover:opacity-30 z-0 select-none pointer-events-none break-words"
-            animate={{ 
-              x: [2, -2, 1, 0],
-              y: [-1, 1, 0],
-            }}
-            transition={{ 
-              repeat: Infinity, 
-              duration: 0.3,
-              repeatDelay: 5
-            }}
-          >
-            FPTU DEBATE <br className="hidden md:block" />
-            <span className="block md:inline mt-2 md:mt-0">CHAMPIONSHIP</span>
-          </motion.h1>
-        </div>
+          />
+        </motion.div>
 
         {/* Description */}
         <motion.p
@@ -74,7 +54,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="text-smoke text-base md:text-xl max-w-2xl mx-auto mb-12 font-light leading-relaxed"
         >
-          Nơi ngọn lửa đam mê được thắp sáng, nơi tư duy sắc bén được tôi luyện. 
+          Nơi ngọn lửa đam mê được thắp sáng, nơi tư duy sắc bén được tôi luyện.
           Hãy sẵn sàng cho hành trình lột xác tại MindForge.
         </motion.p>
 

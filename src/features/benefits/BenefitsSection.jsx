@@ -13,7 +13,7 @@ const BenefitCard = ({ icon: Icon, title, description, index }) => {
     >
       {/* Glow Effect */}
       <div className="absolute inset-0 bg-linear-to-br from-arena-gold/0 via-arena-gold/0 to-arena-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      
+
       {/* Icon */}
       <div className="relative mb-6 inline-flex p-4 rounded-xl bg-arena-gold/10 border border-arena-gold/20 group-hover:bg-arena-gold/20 transition-colors duration-300">
         <Icon className="w-8 h-8 text-arena-gold" strokeWidth={1.5} />
@@ -40,12 +40,12 @@ const BenefitsSection = () => {
     {
       icon: Trophy,
       title: "Giải thưởng hấp dẫn",
-      description: "Giải thưởng hiện kim dành cho các đội đạt giải Nhất, Nhì, Ba, Khuyến Khích. Giải thưởng phụ cho đội thi được yêu thích nhất cùng với nhiều giải thưởng hiện vật hấp dẫn."
+      description: "Giải thưởng hiện kim dành cho các đội thi đạt giải Nhất, Nhì, Ba, Khuyến Khích. Giải thưởng phụ cho đội thi được yêu thích nhất cùng với nhiều giải thưởng hiện vật hấp dẫn."
     },
     {
       icon: TrendingUp,
       title: "Phát triển năng lực tranh biện toàn diện",
-      description: "Cải thiện tư duy logic, cách trình bày, phản biện và giải quyết vấn đề. Giúp xây dựng phong thái tự tin và chuyên nghiệp trong tranh biện qua lộ trình 4 vòng thi được xây dựng theo hướng nâng cấp kỹ năng."
+      description: "Cải thiện tư duy logic, cách trình bày, phản biện và giải quyết vấn đề. Giúp xây dựng phong thái tự tin và chuyên nghiệp trong tranh biện thông qua lộ trình thi đấu chuyên nghiệp."
     },
     {
       icon: Sparkles,
@@ -60,12 +60,7 @@ const BenefitsSection = () => {
     {
       icon: Network,
       title: "Mở rộng mạng lưới kết nối",
-      description: "Kết nối với sinh viên cùng đam mê tranh biện. Trò chuyện, học hỏi từ chuyên gia, ban giám khảo, nhà tài trợ và cộng đồng debate rộng lớn. Tạo nền tảng để tham gia các giải tầm quốc gia và quốc tế trong tương lai."
-    },
-    {
-      icon: Users,
-      title: "Cơ hội ghi dấu trong sân chơi mới",
-      description: "Trở thành một phần của sự kiện đặt nền móng cho các thế hệ sau. Góp phần xây dựng phong trào tranh biện chuyên nghiệp tại FPTU Hà Nội."
+      description: "Kết nối với sinh viên cùng đam mê tranh biện. Trò chuyện, học hỏi từ chuyên gia, ban giám khảo, nhà tài trợ và cộng đồng debate rộng lớn. Tạo nền tảng để tham gia các giải tầm quốc gia và quốc tế."
     }
   ];
 
@@ -91,7 +86,7 @@ const BenefitsSection = () => {
             Quyền Lợi Khi <span className="text-arena-gold">Tham Gia</span>
           </h2>
           <p className="text-smoke max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
-            Tham gia FPTU Debate Championship không chỉ là cuộc thi - đây là hành trình rèn luyện bản thân, 
+            Tham gia FPTU Debate Championship không chỉ là cuộc thi - đây là hành trình rèn luyện bản thân,
             xây dựng thương hiệu và mở rộng cơ hội nghề nghiệp trong tương lai.
           </p>
         </motion.div>

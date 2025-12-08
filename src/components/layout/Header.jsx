@@ -18,22 +18,32 @@ const Header = () => {
     { name: 'Giới thiệu', href: '#hero' },
     { name: 'Timeline', href: '#timeline' },
     { name: 'Quyền lợi', href: '#benefits' },
-    { name: 'Giải thưởng', href: '#prizes' },
+    // { name: 'Giải thưởng', href: '#prizes' },
     { name: 'Thể lệ', href: '#rules' },
     { name: 'QnA', href: '#qna' },
   ];
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'py-4 bg-void-black/90 backdrop-blur-md border-b border-mithril/10' : 'py-6 bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-4 bg-void-black/90 backdrop-blur-md border-b border-mithril/10' : 'py-6 bg-transparent'
+        }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-2xl font-serif font-bold text-mithril tracking-widest"
+          className="text-2xl font-serif font-bold text-mithril tracking-widest cursor-pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <span className="text-magma-red">F</span>DC
         </motion.div>
@@ -44,6 +54,7 @@ const Header = () => {
             <motion.a
               key={link.name}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
@@ -79,7 +90,7 @@ const Header = () => {
                   key={link.name}
                   href={link.href}
                   className="text-mithril hover:text-arena-gold transition-colors font-serif text-lg"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                 >
                   {link.name}
                 </a>

@@ -47,11 +47,11 @@ const PrizeCard = ({ icon: Icon, title, amount, description, index, color }) => 
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ 
+      transition={{
         type: "spring",
         stiffness: 100,
         damping: 15,
-        delay: index * 0.1 
+        delay: index * 0.1
       }}
       viewport={{ once: true }}
       className={`relative bg-void-black/60 backdrop-blur-md border-2 ${colors.border} rounded-2xl p-6 md:p-8 ${colors.glow} hover:scale-105 transition-all duration-300 group overflow-hidden`}
@@ -115,7 +115,7 @@ const PrizesSection = () => {
     },
     {
       icon: Heart,
-      title: "Đội Được Yêu Thích Nhất",
+      title: "Đội Thi Được Yêu Thích Nhất",
       amount: "1.000.000 VNĐ",
       description: "Hiện kim và certificate",
       color: "special"
@@ -153,7 +153,7 @@ const PrizesSection = () => {
           <div className="lg:col-span-3">
             <PrizeCard {...prizes[0]} index={0} />
           </div>
-          
+
           {/* Second and Third Prize */}
           {prizes.slice(1, 3).map((prize, index) => (
             <div key={index + 1} className="lg:col-span-1">
