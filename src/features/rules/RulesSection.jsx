@@ -196,7 +196,7 @@ const RulesSection = () => {
           className="text-center mb-16"
         >
           <span className="text-steel-blue font-mono tracking-widest uppercase text-xs sm:text-sm mb-2 block">Competition Format</span>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-mithril">Thể Lệ Cuộc Thi</h2>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-mithril">Thể Lệ <span className="text-arena-gold">Cuộc Thi</span></h2>
         </motion.div>
 
         {/* Custom Tabs */}

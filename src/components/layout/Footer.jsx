@@ -21,7 +21,7 @@ const Footer = () => {
     {
       icon: <Globe size={20} />,
       label: "Website",
-      href: "https://debate-recruitment.vercel.app/"
+      href: "https://fptu-debatechampionship2026.vercel.app/"
     },
   ];
 
