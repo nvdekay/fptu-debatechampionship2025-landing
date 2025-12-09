@@ -10,7 +10,7 @@ const QnASection = () => {
     {
       id: 1,
       question: "Ai có thể tham gia FPTU Debate Championship 2026?",
-      answer: "Tất cả sinh viên FPTU Hà Nội đều có thể đăng ký, không yêu cầu kinh nghiệm tranh biện trước đó. Chỉ cần tinh thần học hỏi và sẵn sàng thử thách.",
+      answer: "Tất cả sinh viên trên địa bàn Hà Nội đều có thể đăng ký, không yêu cầu kinh nghiệm tranh biện trước đó. Chỉ cần tinh thần học hỏi và sẵn sàng thử thách.",
       time: "10:30 AM"
     },
     {
