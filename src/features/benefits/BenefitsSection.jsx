@@ -40,7 +40,7 @@ const BenefitsSection = () => {
     {
       icon: Trophy,
       title: "Giải thưởng hấp dẫn",
-      description: "Giải thưởng hiện kim dành cho các đội thi đạt giải Nhất, Nhì, Ba, Khuyến Khích. Giải thưởng phụ cho đội thi được yêu thích nhất cùng với nhiều giải thưởng hiện vật hấp dẫn."
+      description: "Giải thưởng hiện kim dành cho các đội thi đạt giải Quán Quân, Á Quân, Quý Quân, Khuyến Khích. Giải thưởng phụ cho đội thi được yêu thích nhất cùng với nhiều giải thưởng hiện vật hấp dẫn."
     },
     {
       icon: TrendingUp,

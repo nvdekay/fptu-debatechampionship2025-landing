@@ -17,13 +17,13 @@ const TimelineNode = ({ phase, title, date, description, index, isLast }) => {
           className={`w-8 h-8 rounded-full border-2 z-20 flex items-center justify-center bg-void-black
             ${index === 0 ? 'border-magma-red shadow-[0_0_15px_#7F1D1D]' :
               index === 1 ? 'border-steel-blue shadow-[0_0_15px_#132750]' :
-                index === 2 ? 'border-mithril shadow-[0_0_15px_#E5E7EB]' :
+                index === 2 ? 'border-magma-red shadow-[0_0_15px_#7F1D1D]' :
                   'border-arena-gold shadow-[0_0_15px_#D9AF2C]'}`}
         >
           <div className={`w-3 h-3 rounded-full 
             ${index === 0 ? 'bg-magma-red' :
               index === 1 ? 'bg-steel-blue' :
-                index === 2 ? 'bg-mithril' :
+                index === 2 ? 'bg-magma-red' :
                   'bg-arena-gold'}`}
           />
         </motion.div>
@@ -48,8 +48,9 @@ const TimelineNode = ({ phase, title, date, description, index, isLast }) => {
           <span className={`text-sm font-mono tracking-widest uppercase mb-1 block
             ${index === 0 ? 'text-magma-red' :
               index === 1 ? 'text-steel-blue' :
-                index === 2 ? 'text-mithril' :
-                  'text-arena-gold'}`}
+                index === 2 ? 'text-magma-red' :
+                  index === 3 ? 'text-arena-gold' :
+                    'text-arena-gold'}`}
           >
             Phase 0{index + 1}: {phase}
           </span>

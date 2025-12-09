@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Video, Users, Mic2, FileText, CheckCircle, Clock, Calendar, Trophy } from 'lucide-react';
+import { Video, Users, Mic2, FileText, CheckCircle, Clock, Calendar, Trophy, Swords } from 'lucide-react';
 
 const rounds = [
   {
@@ -94,7 +94,7 @@ const rounds = [
   {
     id: 'ban-ket',
     label: 'Bán Kết',
-    icon: Trophy,
+    icon: Swords,
     content: {
       title: 'Vòng Bán Kết: Trận Chiến Quyết Định',
       sections: [
