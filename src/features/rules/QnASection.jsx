@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { User, Search, MoreHorizontal, Phone, Video, Send, Image as ImageIcon, Smile, Mic } from 'lucide-react';
+import { User, Search, MoreHorizontal, Phone, Video, Send, Image as ImageIcon, Smile, Mic, ArrowLeft } from 'lucide-react';
 
 const QnASection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [showMobileChat, setShowMobileChat] = useState(false);
 
   const faqs = [
     {
@@ -77,7 +78,8 @@ const QnASection = () => {
           className="max-w-6xl mx-auto bg-void-black/60 backdrop-blur-xl border border-mithril/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row h-[600px] md:h-[700px]"
         >
           {/* Left Sidebar - Chat List */}
-          <div className="w-full md:w-[350px] lg:w-[400px] bg-void-black/40 border-b md:border-b-0 md:border-r border-mithril/10 flex flex-col h-[40%] md:h-full">
+          {/* Mobile: Hidden if chat open. Desktop: Always visible */}
+          <div className={`w-full md:w-[350px] lg:w-[400px] bg-void-black/40 border-b md:border-b-0 md:border-r border-mithril/10 flex-col h-full md:h-full ${showMobileChat ? 'hidden md:flex' : 'flex'}`}>
             {/* Header */}
             <div className="p-4 border-b border-mithril/10 flex justify-between items-center bg-void-black/20">
               <h3 className="text-xl font-bold text-mithril">Chats</h3>
@@ -104,7 +106,10 @@ const QnASection = () => {
               {faqs.map((faq, index) => (
                 <div
                   key={faq.id}
-                  onClick={() => setActiveIndex(index)}
+                  onClick={() => {
+                    setActiveIndex(index);
+                    setShowMobileChat(true);
+                  }}
                   className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer transition-all duration-200 ${activeIndex === index ? 'bg-steel-blue/20' : 'hover:bg-mithril/5'}`}
                 >
                   <div className="relative shrink-0">
@@ -129,10 +134,19 @@ const QnASection = () => {
           </div>
 
           {/* Right Main - Active Chat */}
-          <div className="flex-1 flex flex-col bg-void-black/20 h-[60%] md:h-full">
+          {/* Mobile: Flex if chat open, hidden if not. Desktop: Always flex */}
+          <div className={`flex-1 flex-col bg-void-black/20 h-full md:h-full ${showMobileChat ? 'flex' : 'hidden md:flex'}`}>
             {/* Chat Header */}
             <div className="p-4 border-b border-mithril/10 flex justify-between items-center bg-void-black/40 backdrop-blur-sm z-10 shadow-sm">
               <div className="flex items-center gap-3">
+                {/* Back Button for Mobile */}
+                <button
+                  onClick={() => setShowMobileChat(false)}
+                  className="md:hidden text-mithril hover:text-white mr-1"
+                >
+                  <ArrowLeft size={24} />
+                </button>
+
                 <div className="relative">
                   <div className="w-10 h-10 rounded-full bg-void-black border border-arena-gold/30 p-0.5">
                     <img src="/img/icon.webp" alt="Admin" className="w-full h-full object-contain rounded-full" />
@@ -140,14 +154,14 @@ const QnASection = () => {
                   <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-void-black rounded-full"></div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-mithril flex items-center gap-2">
-                    FPTU Debate Championship 2026
-                    <span className="bg-arena-gold text-void-black text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">Bot</span>
+                  <h3 className="font-bold text-mithril flex items-center gap-2 text-sm sm:text-base">
+                    <span className="truncate max-w-[150px] sm:max-w-none">FPTU Debate Championship 2026</span>
+                    <span className="bg-arena-gold text-void-black text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider shrink-0">Bot</span>
                   </h3>
                   <p className="text-xs text-arena-gold">Active now</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4 text-steel-blue">
+              <div className="flex items-center gap-2 sm:gap-4 text-steel-blue">
                 <Phone size={20} className="hover:text-arena-gold cursor-pointer" />
                 <Video size={20} className="hover:text-arena-gold cursor-pointer" />
                 <MoreHorizontal size={20} className="hover:text-arena-gold cursor-pointer" />

@@ -16,7 +16,7 @@ const HeroSection = () => {
           <img
             src="/img/logo kim loại.webp"
             alt="FPTU Debate Championship Logo"
-            className="w-32 sm:w-48 md:w-3/5 h-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+            className="w-3/5 sm:w-3/5 md:w-3/5 h-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
           />
         </motion.div>
 

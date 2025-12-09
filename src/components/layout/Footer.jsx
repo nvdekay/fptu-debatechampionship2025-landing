@@ -131,9 +131,9 @@ const Footer = () => {
           {/* Contact Info */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col gap-4 lg:text-left"
+            className="flex flex-col gap-4 items-center lg:items-start lg:text-left"
           >
-            <h4 className="text-xl font-bold text-magma-red mb-2 font-serif">
+            <h4 className="text-xl font-bold text-magma-red mb-2 font-serif text-center lg:text-left">
               Thông tin liên hệ
             </h4>
 
@@ -156,7 +156,7 @@ const Footer = () => {
             </motion.div>
 
             <motion.div
-              className="flex items-center gap-3"
+              className="flex items-center gap-3 justify-center lg:justify-start"
               whileHover={{ x: 5 }}
             >
               <Mail className="text-2xl text-magma-red" size={24} />
