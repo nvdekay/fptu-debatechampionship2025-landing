@@ -44,7 +44,7 @@ const rounds = [
           icon: Calendar,
           items: [
             'Cách nộp: Nhóm gửi đường link video (Drive/YouTube) kèm Google Form đăng ký.',
-            'Hạn cuối nhận bài: 01/01/2026.',
+            'Hạn cuối nhận bài: 20h00, 01/01/2026.',
             'Kết quả: BTC chọn ra 8 đội thi có điểm cao nhất để tiến vào vòng "Sơ khảo".'
           ]
         }
